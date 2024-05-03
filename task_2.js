@@ -54,13 +54,10 @@ function menu() {
         return rl.close();
       case 'y':
       case 'Y':
-        rl.question(
-          "Введите массив положительных целых чисел произвольной длины через запятую и нажмите клавишу 'Enter': ",
-          (line) => {
-            if (addToArray(line)) console.log('Массив успешно заполнен:', arr);
-            menu();
-          }
-        );
+        rl.question("Введите массив положительных целых чисел произвольной длины через запятую и нажмите клавишу 'Enter': ", (line) => {
+          if (addToArray(line)) console.log('Массив успешно заполнен:', arr);
+          menu();
+        });
         break;
       case '':
       case ' ':
